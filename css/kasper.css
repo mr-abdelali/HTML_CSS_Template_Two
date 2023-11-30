@@ -9,9 +9,13 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: black;
 }
 ul {
     list-style: none;
+}
+a {
+    text-decoration: none;
 }
 .container {
     padding-left: 15px;
@@ -38,3 +42,41 @@ ul {
     }
 }
 /* End Global Rules */
+/* Start Header */
+header {
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    border-bottom: 2px solid gray;
+    bottom: 0;
+    left: 15px;
+
+}
+header nav {
+    flex: 1;
+}
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+header nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+    color: white;
+
+}
+header nav ul li a{
+    color: white;
+}
+/* End Header */
