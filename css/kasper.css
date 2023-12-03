@@ -1,7 +1,10 @@
 /* Start Variables */
 :root {
     --main-color: #19c8fa;
-    --transparent-color: rgba(15,116,143,0.8)
+    --transparent-color: rgba(15,116,143,0.8);
+    --component-color: #1f2021;
+    --component-description: #777;
+    --section-padding: 100px;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -44,6 +47,50 @@ ul {
     }
 }
 /* End Global Rules */
+/*Start Component*/
+.component {
+    text-align: center;
+}
+.component h2 {
+    color: var(--component-color);
+    font-size: 34px;
+    font-weight: 300;
+    text-transform:uppercase;
+    padding-bottom: 20px;
+    position: relative;
+}
+.component h2::before {
+    content: '';
+    position: absolute;
+    width: 110px;
+    height: 1px;
+    background: var(--component-color);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.component h2::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--component-color);
+    border-radius: 50%;
+    bottom: -7.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+}
+.component p {
+    padding-top: 30px;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+    line-height: 1.7;
+    color: var(--component-description);
+    font-size: 14px;
+}
+/*End Component*/
 /* Start Header */
 header {
     position: absolute;
@@ -83,8 +130,6 @@ header nav .toggle-menu {
     header nav .toggle-menu {
         display: none;
     }
-
-
 }
 header nav ul {
     display: flex;
@@ -219,3 +264,42 @@ margin-bottom: 20px;
     border-color: var(--main-color);
 }
 /* End Landing */
+/* Start Service */
+.service {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+@media (min-width: 768px) {
+    .service .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-gap: 40px;
+}
+}
+.service .srv-box {
+    display: flex;
+}
+.service .srv-box i {
+    margin-right: 50px;
+}
+@media (max-width: 767px) {
+    .service .srv-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .service .srv-box i {
+        margin: 0 0 20px;
+    }
+}
+.service .srv-box .text h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+.service .srv-box .text p {
+    color: var(--component-description);
+    line-height: 2;
+    font-size: 14px;
+}
+/* End Service */
