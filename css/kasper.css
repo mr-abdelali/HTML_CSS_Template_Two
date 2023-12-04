@@ -269,7 +269,7 @@ margin-bottom: 20px;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .service .services-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -282,7 +282,7 @@ margin-bottom: 20px;
 .service .srv-box i {
     margin-right: 50px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .service .srv-box {
         display: flex;
         flex-direction: column;
