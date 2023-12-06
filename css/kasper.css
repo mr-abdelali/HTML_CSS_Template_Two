@@ -303,3 +303,66 @@ margin-bottom: 20px;
     font-size: 14px;
 }
 /* End Service */
+/* Start Design */
+.design {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 500px;
+    background-color: var(--component-color);
+    display: flex;
+    justify-content: flex-end;
+    color: #e6f0f3;
+    position: relative;
+    overflow: hidden;
+}
+.design .images {
+    position: absolute;
+    bottom: -30px;
+    left: 20%;
+}
+@media (max-width:1281px) {
+    .design {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .design .images {
+        display: none;
+    }
+}
+.design .images .black {
+    position: relative;
+    left: 20%;
+
+}
+.design .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 50px;
+    min-width: 45%;
+    min-height: 350px;
+    background-color: var(--transparent-color);
+}
+@media (max-width:990px) {
+    .design .text {
+        min-width: 450px;
+    }
+}
+.design .text .icons {
+    padding-top: 30px;
+} 
+.design .text .icons div {
+    padding-bottom: 15px;
+    font-size: 16px;
+} 
+.design .text .icons div::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f108';
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+
+} 
+/* End Design */
