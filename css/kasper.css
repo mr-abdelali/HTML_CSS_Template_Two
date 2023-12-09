@@ -504,3 +504,25 @@ margin-bottom: 20px;
     }
 }
 /* End About */
+/* Start Stats */
+.stats {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #121116;
+    color: white;
+}
+.stats .container {
+    background-color: var(--transparent-color);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.stats .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px
+}
+/* End Stats */
