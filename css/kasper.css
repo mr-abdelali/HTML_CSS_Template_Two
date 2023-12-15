@@ -825,6 +825,34 @@ margin-bottom: 20px;
     color: white;
     text-transform: capitalize;
     font-size: 15px;
-
 }
 /* End Pricing */
+.subscribe {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+.subscribe::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.subscribe .container {
+    position: relative;
+    display: flex;
+}
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+/* Start Subscribe */
+
+/* End Subscribe */
